@@ -4,11 +4,11 @@ const MailboxDetails = ({mailbox}) => {
 
     const {mailboxId} = useParams();
 
-    const mailboxDetail = mailbox.find((box) => 
+    const selectedBox = mailbox.find((box) => 
         box.id === Number(mailboxId)
 );
 
-if(!mailboxDetail) {
+if(!selectedBox) {
     return <h1>Mailbox not found</h1>
 }
 
@@ -17,8 +17,8 @@ if(!mailboxDetail) {
             <h1>Mailbox {mailboxId}</h1>
 
             <h3>Details</h3>
-            <p>Boxholder: {mailboxDetail.boxOwner}</p>
-            <p>Box size: {mailboxDetail.boxSize}</p>
+            <p>Boxholder: {selectedBox.boxOwner}</p>
+            <p>Box size: {selectedBox.boxSize}</p>
             <div>
 
             </div>

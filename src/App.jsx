@@ -10,17 +10,15 @@ import MailboxDetails from './components/MailboxDetails';
 const App = () => {
 
   const [mailbox, setMailbox] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
-
+  const [letters, setLetters] = useState([]);
 
   const addMailbox = (newMailbox) => {
     setMailbox([...mailbox, newMailbox]);
   };
 
+
   return (
     <div>
-      <h1>Hello world!</h1>
       <NavBar />
       <Routes>
         <Route path="/" element={<h1>Home</h1>} />
